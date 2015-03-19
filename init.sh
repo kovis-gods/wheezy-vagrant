@@ -20,7 +20,7 @@ echo "deb-src http://packages.dotdeb.org wheezy-php56 all" >> /etc/apt/sources.l
 
 wget http://www.dotdeb.org/dotdeb.gpg -O- |apt-key add -
 apt-get update
-apt-get -q -y install php5 php5-mysql php5-curl
+apt-get -q -y install php5 php5-mysql php5-curl php5-mcrypt
 a2enmod php5
 
 #
