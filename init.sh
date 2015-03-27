@@ -63,6 +63,8 @@ sudo sed -i "s/;date.timezone =.*/date.timezone = ${PHP_TIMEZONE/\//\\/}/" /etc/
 sudo cp /etc/mysql/my.cnf /etc/mysql/my.bkup.cnf
 # Note: Since the MySQL bind-address has a tab cahracter I comment out the end line
 sudo sed -i 's/bind-address/bind-address = 0.0.0.0#/' /etc/mysql/my.cnf
+# thread stack to 256K for fulltext MyIsam
+sudo sed -i 's/thread_stack/thread_stack = 256K#/' /etc/mysql/my.cnf
 
 #
 # Grant All Priveleges to ROOT for remote access
